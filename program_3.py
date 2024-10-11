@@ -9,3 +9,21 @@
 # The amount of state sales tax.
 # The total sales tax (county plus state)
 # Use at least one function with input and output in this program
+
+
+def county_tax(sales):
+    county = sales * 0.025
+    return county
+
+def state_tax(sales):
+    state = sales * 0.05
+    return state
+
+if __name__ == '__main__':
+    totalSales = int(input("What is the total sales? $"))
+    totalCountyTax = county_tax(totalSales)
+    totalStateTax = state_tax(totalSales)
+    print('County Sales Tax: $',totalCountyTax)
+    print('State Sales Tax: $',totalStateTax)
+    entireTax = totalCountyTax + totalStateTax
+    print('Total Sales Tax: $',entireTax)
